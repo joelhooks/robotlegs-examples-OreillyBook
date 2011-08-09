@@ -1,0 +1,6 @@
+CREATE TABLE main.statuses
+(
+	statusId INTEGER PRIMARY KEY AUTOINCREMENT,
+	taskLimit INTEGER DEFAULT 0,
+	label String NOT NULL
+)

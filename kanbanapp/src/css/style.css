@@ -1,0 +1,26 @@
+@namespace s "library://ns.adobe.com/flex/spark";
+
+global {
+    fontFamily: Verdana;
+    fontSize: 14;
+}
+
+s|WindowedApplication {
+    backgroundColor: #D8DACC;
+}
+
+@font-face {
+    src: url("../assets/fonts/FromWhereYouAre.ttf");
+    fontFamily: sketchBlock;
+    embedAsCFF: true;
+    advancedAntiAliasing: true;
+    unicodeRange: U+0041-005A, U+0061-007A
+}
+
+@namespace
+"robotlegs.examples.kanban.view.*"
+;
+
+.sketchBlock {
+    fontFamily: sketchBlock;
+}

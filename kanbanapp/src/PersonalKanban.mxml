@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<WindowedApplication xmlns:fx="http://ns.adobe.com/mxml/2009"
+                     xmlns="library://ns.adobe.com/flex/spark"
+                     xmlns:kanban="robotlegs.examples.kanban.*"
+                     xmlns:view="robotlegs.examples.kanban.view.*"
+                     showStatusBar="false">
+
+    <fx:Style source="css/style.css"/>
+
+    <fx:Declarations>
+        <kanban:PersonalKanbanContext contextView="{this}"/>
+    </fx:Declarations>
+
+    <Image source="@Embed('assets/images/whiteboard.png')"/>
+
+    <VGroup width="100%"
+            height="100%">
+        <view:ApplicationHeader/>
+        <view:TaskEntryBar/>
+        <view:StatusGroup/>
+    </VGroup>
+
+</WindowedApplication>

@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<s:HGroup
+        xmlns:fx="http://ns.adobe.com/mxml/2009"
+        xmlns:s="library://ns.adobe.com/flex/spark"
+        width="100%"
+        paddingLeft="30"
+        paddingRight="30"
+        verticalAlign="middle">
+
+    <fx:Script><![CDATA[
+        import robotlegs.examples.kanban.controller.events.SaveTaskEvent;
+        import robotlegs.examples.kanban.model.vo.Task;
+
+        private function taskInput_enterHandler():void
+        {
+            var task:Task = new Task(taskInput.text);
+
+            dispatchEvent(new SaveTaskEvent(task));
+
+            reset();
+        }
+
+        public function reset():void
+        {
+            taskInput.text = "";
+        }
+        ]]></fx:Script>
+
+    <s:Button id="addTask"
+              label="Add Task Backlog:"
+              click="taskInput_enterHandler()"/>
+    <s:TextInput id="taskInput"
+                 width="100%"
+                 enter="taskInput_enterHandler()"/>
+
+</s:HGroup>
